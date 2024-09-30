@@ -5,20 +5,17 @@ import lombok.Setter;
 @Setter
 public class Main {
     public static void main(String[] args) {
-        Car honda = new Car();
-        honda.setModel("Civic");
-        honda.setBody("RED");
-        honda.setWheels(236);
+        Colour colourHonda = Colour.fromHex(0xFFFF);
+        Car honda = new Car("Civic", colourHonda.name(), 236);
+        Colour colourToyota = Colour.fromHex(0x001F);
+        Car toyota = new Car("Celica", colourToyota.name(), 230);
+        Colour colourLexus = Colour.fromHex(0xF800);
+        Car lexus = new Car("is200", colourLexus.name(), 220);
 
-        Car toyota = new Car();
-        toyota.setModel("Celica");
-        toyota.setBody("Blue");
-        toyota.setWheels(230);
+        System.out.println("Honda " + honda);
+        System.out.println("Toyota " + toyota);
+        System.out.println("Lexus " + lexus);
 
-        Car lexus = new Car();
-        lexus.setModel("is200");
-        lexus.setBody("White");
-        lexus.setWheels(220);
-        System.out.println(honda);
+
     }
 }
