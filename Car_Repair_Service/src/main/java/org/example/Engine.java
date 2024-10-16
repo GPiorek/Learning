@@ -8,4 +8,15 @@ import lombok.Setter;
 public class Engine {
     private String modelEngine;
     private double capacity;
+
+    public Engine(String modelEngine, double capacity) {
+        this.modelEngine = modelEngine;
+        this.capacity = capacity;
+    }
+
+    @Override
+    public String toString() {
+        return modelEngine + " " +
+                capacity ;
+    }
 }

@@ -6,11 +6,16 @@ import lombok.Setter;
 public class Main {
     public static void main(String[] args) {
         Colour colourHonda = Colour.fromHex(0xFFFF);
-        Car honda = new Car("Civic", colourHonda.name(), 236);
+        Engine engineHonda = new Engine("Vtec", 2.0);
+        Car honda = new Car("Civic", colourHonda.name(), 236, engineHonda);
         Colour colourToyota = Colour.fromHex(0x001F);
-        Car toyota = new Car("Celica", colourToyota.name(), 230);
+        Engine engineToyota = new Engine("1ZZ-FE", 1.8);
+        Car toyota = new Car("Celica", colourToyota.name(), 230,engineToyota);
         Colour colourLexus = Colour.fromHex(0xF800);
-        Car lexus = new Car("is200", colourLexus.name(), 220);
+        Engine engineLexus = new Engine("1G-FE", 2.0);
+        Car lexus = new Car("is200", colourLexus.name(), 220, engineLexus);
+
+
 
         System.out.println("Honda " + honda);
         System.out.println("Toyota " + toyota);

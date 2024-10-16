@@ -14,18 +14,24 @@ public class Car {
     private String body;
     @NonNull
     private int wheels;
+    private Engine engine;
 
-    public Car(@NonNull String model, @NonNull String body, @NonNull int wheels) {
+
+    public Car(@NonNull String model, @NonNull String body, @NonNull int wheels, Engine engine) {
         this.model = model;
         this.body = body;
         this.wheels = wheels;
+        this.engine = engine;
     }
 
     @Override
     public String toString() {
-        return  model + " " +
+        return model + " " +
                 body + " " +
-                wheels + "km/h";
+                wheels + " " +
+                engine ;
     }
 }
+
+
 
