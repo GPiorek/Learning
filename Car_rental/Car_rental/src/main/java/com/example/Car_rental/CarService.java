@@ -14,9 +14,6 @@ public CarMagasine carMagasine;
 
     public void carRent(int carId) {
     Car car = carMagasine.findCarById(carId);
-            if(car == null){
-            throw new RuntimeException("Not found");
-    }
             if(!car.isReserved){
                 car.setReserved(true);
                 System.out.println(car.getBrand() + car.getModel() + "Has been reserved");
@@ -27,6 +24,8 @@ public CarMagasine carMagasine;
             }
 
 
-
+//TODO: Localdate dla kalendarza rezerwacji 
     }
+
+
 }

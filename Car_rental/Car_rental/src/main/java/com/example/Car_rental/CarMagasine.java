@@ -27,7 +27,7 @@ public class CarMagasine {
                 return car;
             }
         }
-        return null;
+        throw new RuntimeException("Didnt found");
     }
 
 
