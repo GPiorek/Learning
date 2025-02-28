@@ -1,11 +1,11 @@
-package com.example.simple_shop.Item;
+package com.example.simple_shop.Product;
 
-public class Item {
+public class Product {
     String name;
     double price;
 
 
-    public Item(String name, double price) {
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -24,5 +24,13 @@ public class Item {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
